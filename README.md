@@ -39,15 +39,16 @@ Group Members:
 
 > Mention the web server used on "monta.if.its.ac.id"!
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+Jawaban, Penjelesan,& Screenshot di sini
+With the help of wireshark filter _tcp contains_, we can see which server are using the tcp protocol to request a GET method to retreive and request data from a specified resource in a server. From our experiment we can see that the web server used by monta.if.its.ac.id was `103.94.189.5` shown by the picture below <br>
+MASUKIN GAMBAR
 
 ### Question 2
 
 > Ishaq was confused looking for TA topics for this semester, then he came to the monta website and found the topic details on the website “monta.if.its.ac.id”, what TA title did Ishaq open?
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+By using Ishaq's ip address of `103.94.189.5`, we can filter his network traffic by searching a tcp protocol that is using a GET request which contains topik in the request. We can see in our experiment there is a GET method which request `/index.php/topik/detailTopik/194 HTTP/1.1` by Ishaq. Therefore, we can conclude that this is the topic that Ishaq open. Using our own browser to send a GET request to the server with the same value as Ishaq's, we can see the topic that Ishaq's looking for which is Evaluasi untuk kerja User Space Filesystem (FUSE).<br>
+MASUKIN GAMBAR
 
 ### Question 3
 
@@ -67,15 +68,15 @@ Jawaban, Penjelesan,& Screenshot di sini!
 
 > Filter so that wireshark only picks up packets coming from port 443!
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+We can filter our network traffic coming only from port 443 by using the command `tcp.srcport == 443`. Source port is where the packet/connection originated. Therefore, by using this filter, we can view packets coming only from the port _443_.<br>
+MASUKIN GAMBAR
 
 ### Question 6
 
 > Filter so that wireshark only shows packets going to lipi.go.id !
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+To see packets only going to a specific domain, we used `http.host == lipi.go.id`. This filter will show us http requests going to this specific domain which in our case there is only one device trying to send a GET request to this domain from `192.168.0.27`.<br>
+MASUKIN GAMBAR
 
 ### Question 7
 
