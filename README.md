@@ -95,8 +95,26 @@ Jawaban, Penjelesan,& Screenshot di sini!
 
 > There are reports of file exchanges made by the two students in the conversations obtained, look for the file in question! To facilitate reporting to superiors, name the file found in the format **[group_name].des3** and save the output file with the name **“flag.txt”.**
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+Using the IPs of the two perpetrator ,`127.0.0.1` & `127.0.1.1`, knowing that one of them is the supplier (`127.0.1.1`) we can find any clue to lead where the supplier would send its file. By following the conversation using the previous display filter we would find the following:
+
+![Incriminating Lead 1](Contents/no9_1.png)
+
+![Incrimintating Lead 2](Contents/no9_2.png)
+
+From this we know that the file would be encrypted under a **.des3** file format (as so, it would be most likely be gibberish or salted in its raw form.), and that it would be sent over **"9002"** which is a port number. Using this newfound knowledge, we could use the following display filter:
+
+`ip.src == 127.0.1.1 && tcp.port == 9002 && tcp.flags.push == 1`
+
+in which it would display:
+
+![File Transmission Captured](Contents/no9_3.png)
+
+here we would find the salted data in which is the file in question. As we are asked to export the content to a file, we would export the **raw data** from WireShark and export it to a file named **I01.des3**.
+
+The data in its raw form:<br>
+`53616c7465645f5fbf3adfafa4884228ce051bd1f6c12445a416e84b29c1d63c3c081b8bb9fcf566209587961317e142ff4734e4da2bcbcf`
+
+the output of the decryption (**flag.txt**) will be discussed in the next question.
 
 ### Question 10
 
