@@ -39,7 +39,6 @@ Group Members:
 
 > Mention the web server used on "monta.if.its.ac.id"!
 
-Jawaban, Penjelesan,& Screenshot di sini
 With the help of wireshark filter _tcp contains_, we can see which server are using the tcp protocol to request a GET method to retreive and request data from a specified resource in a server. From our experiment we can see that the web server used by monta.if.its.ac.id was `103.94.189.5` shown by the picture below <br>
 MASUKIN GAMBAR
 
