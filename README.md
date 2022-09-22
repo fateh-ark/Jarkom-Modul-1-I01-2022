@@ -120,9 +120,26 @@ the output of the decryption (**flag.txt**) will be discussed in the next questi
 
 > Find the secret password (flag) of the above-mentioned underground organization!
 
-Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+After finding the file and exporting it, now we need to decrypt it using a password. To find the password we would just need to find a message from the supplier (`127.0.1.1`) that would contain any mention or keyword of 'password', in which the display filter would be:
+
+`ip.src == 127.0.1.1 && tcp contains password`
+
+where it would display:
+
+![Password Clue](Contents/no10_1.png)
+
+>*"Ada, klo nggak salah passwordnya itu pake nama karakter anime yang kembar lima itu lho, jangan lupa pake huruf kecil semua"*
+
+Using this clue, we would find that this leads to the Anime series **Go-tōbun No Hanayome**, an anime that features a quintuplet twins named the **Nakanos**, as so the password is infered to be **nakano**.
+
+To test this we would need to use OpenSSL via Command or Terminal that supports it. For this example we would use the shell terminal provided by XAMPP that have OpenSSL already installed. by putting the command `openssl des3 -d -salt -in [des3 File location] -out flag.txt` (des3 since its the format, -d because we're decrypting, -salt because the file is salted) and then putting in the password we would get the following output:
+
+![XAMPP Shell prompt](Contents/no10_2.png)
+
+![flag.txt content](Contents/no10_3.png)
+
+
 
 ## Revisions
 
-+ Perubahan & Revisi di tulis di sini.
++ Continued Number 9 & 10, since it was previously left incomplete.
