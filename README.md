@@ -146,4 +146,5 @@ To test this we would need to use OpenSSL via Command or Terminal that supports 
 
 ## Revisions
 
++ Changed answer & explanation a bit for number 1.
 + Continued Number 9 & 10, since it was previously left incomplete.
