@@ -40,14 +40,18 @@ Group Members:
 > Mention the web server used on "monta.if.its.ac.id"!
 
 With the help of wireshark filter _tcp.host_, we can see which server are using the tcp protocol to request a GET method to retreive and request data from a specified resource in a server. From our experiment we can see that the web server used by monta.if.its.ac.id was `nginx/1.10.3` shown by the picture below <br>
-MASUKIN GAMBAR
+![Result](Contents/no1.png)
 
 ### Question 2
 
 > Ishaq was confused looking for TA topics for this semester, then he came to the monta website and found the topic details on the website “monta.if.its.ac.id”, what TA title did Ishaq open?
 
-By using Ishaq's ip address of `103.94.189.5`, we can filter his network traffic by searching a tcp protocol that is using a GET request which contains topik in the request. We can see in our experiment there is a GET method which request `/index.php/topik/detailTopik/194 HTTP/1.1` by Ishaq. Therefore, we can conclude that this is the topic that Ishaq open. Using our own browser to send a GET request to the server with the same value as Ishaq's, we can see the topic that Ishaq's looking for which is Evaluasi untuk kerja User Space Filesystem (FUSE).<br>
-MASUKIN GAMBAR
+By using Ishaq's ip address of `103.94.189.5`, we can filter his network traffic by searching a tcp protocol that is using a GET request which contains topik in the request. We can see in our experiment there is a GET method which request `/index.php/topik/detailTopik/194 HTTP/1.1` by Ishaq.
+
+![Result](Contents/no2_1.png)
+
+Therefore, we can conclude that this is the topic that Ishaq open. Using our own browser to send a GET request to the server with the same value as Ishaq's, we can see the topic that Ishaq's looking for which is Evaluasi untuk kerja User Space Filesystem (FUSE).<br>
+![Result](Contents/no2_2.png)
 
 ### Question 3
 
@@ -82,14 +86,14 @@ To see packets only going to a specific domain, we used `http.host == lipi.go.id
 > Filter so that wireshark only picks up packets coming from your ip!
 
 Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+![Result](Contents/no7.png)
 
 ### Question 8
 
 > Browse the flow of packets in the given .pcap file, look for useful information in the form of a conversation between two students regarding cheating in practicum activities. The conversation is reported to use a network protocol with a high level of reliability in its data exchange so you need to apply a filter with that protocol.
 
 Jawaban, Penjelesan,& Screenshot di sini!
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+![Result](Contents/no8.png)
 
 ### Question 9
 
