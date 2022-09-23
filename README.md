@@ -61,7 +61,7 @@ filtering packets that only going to port 80 can be easily done by applying comm
 > Filter so that wireshark only picks up packets coming from port 21!
 
 in order to get information about packets that only coming from port 21 in our network traffic we can do that by applying filter by using command `tcp.srcport == 21` and thus will catch all the packets that are coming from port 21 <br>
-<!--- Buat files/screenshot bisa di taro di folder contents aja --->
+![Result](Contents/no4.png)
 
 ### Question 5
 
