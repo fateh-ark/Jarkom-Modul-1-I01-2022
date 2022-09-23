@@ -68,14 +68,14 @@ in order to get information about packets that only coming from port 21 in our n
 > Filter so that wireshark only picks up packets coming from port 443!
 
 We can filter our network traffic coming only from port 443 by using the command `tcp.srcport == 443`. Source port is where the packet/connection originated. Therefore, by using this filter, we can view packets coming only from the port _443_.<br>
-MASUKIN GAMBAR
+![Result](Contents/no5.png)
 
 ### Question 6
 
 > Filter so that wireshark only shows packets going to lipi.go.id !
 
 To see packets only going to a specific domain, we used `http.host == lipi.go.id`. This filter will show us http requests going to this specific domain which in our case there is only one device trying to send a GET request to this domain from `192.168.0.27`.<br>
-MASUKIN GAMBAR
+![Result](Contents/no6.png)
 
 ### Question 7
 
