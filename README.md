@@ -53,14 +53,14 @@ MASUKIN GAMBAR
 
 > Filter so that wireshark only shows packets going to port 80!
 
-Jawaban, Penjelesan,& Screenshot di sini!
+filtering packets that only going to port 80 can be easily done by applying command `tcp.dstport == 80` . by using this command this will sort out all the packets that are only going or assigned to go to port 80 <br>
 <!--- Buat files/screenshot bisa di taro di folder contents aja --->
 
 ### Question 4
 
 > Filter so that wireshark only picks up packets coming from port 21!
 
-Jawaban, Penjelesan,& Screenshot di sini!
+in order to get information about packets that only coming from port 21 in our network traffic we can do that by applying filter by using command `tcp.srcport == 21` and thus will catch all the packets that are coming from port 21 <br>
 <!--- Buat files/screenshot bisa di taro di folder contents aja --->
 
 ### Question 5
