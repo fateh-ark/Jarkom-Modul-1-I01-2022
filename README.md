@@ -85,14 +85,16 @@ To see packets only going to a specific domain, we used `http.host == lipi.go.id
 
 > Filter so that wireshark only picks up packets coming from your ip!
 
-Jawaban, Penjelesan,& Screenshot di sini!
+if we were using an Windows OS, we could open the Command Prompt and use the `ipconfig` to find out our current IP address (IPv4), after that we could just use `ip.src` in wireshark followed by our IP address to get the followin result:
+
 ![Result](Contents/no7.png)
 
 ### Question 8
 
 > Browse the flow of packets in the given .pcap file, look for useful information in the form of a conversation between two students regarding cheating in practicum activities. The conversation is reported to use a network protocol with a high level of reliability in its data exchange so you need to apply a filter with that protocol.
 
-Jawaban, Penjelesan,& Screenshot di sini!
+Since we know there are only two perpetrators that are having a discussion, by common sense there should be two IP Addresses that are going back-and-forward speaking to each other. From the .pcapng file we can see that there 2 frequently occuring IPs which are `127.0.0.1` & `127.0.1.1`, from this we can use the filter `ip.src == 127.0.1.1 && tcp.port == 9002` to only display from the two prepertators. But we still need to filter out non-discussion capture, this is done by putting a `tcp.flags.push == 1` as that capture with data in it uses the push flag. As such we would get the following:
+
 ![Result](Contents/no8.png)
 
 ### Question 9
